@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+header {
+  width: 100vw;
+  height: 9rem;
+  background-color: #2b2b2b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.mode {
+  min-width: 4rem;
+}
+
+.my-photo img {
+  max-width: 6rem;
+  border-radius: 10rem;
+  box-shadow: 5px 5px 15px -2px rgba(255, 255, 255, 0.5);
+}
+
+nav ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  color: #eee;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  color: #eee;
+  text-decoration: none;
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+nav ul li:hover {
+  background-color: #202020;
+}
+
+main {
+  margin-top: 11rem;
+}
+
+section.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 10rem;
+  gap: 10rem;
+  color: #eee;
+}
+
+.presentation-text h1 {
+  font-size: 1.4rem;
+}
+
+.presentation-text .my-name {
+  font-size: 5rem;
+  line-height: 6rem;
+  color: #fff;
+}
+.presentation-text h3 {
+  font-size: 1.7rem;
+}
+
+.presentation button {
+  font-size: 1rem;
+  background: transparent;
+  border: 2px solid #eee;
+  color: #fff;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: all 0.9s ease;
+}
+
+.presentation button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.presentation button:hover {
+  background: #000;
+  border: 2px solid #000;
+}
+
+#btn-1 {
+  background: #eee;
+  border: none;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+#btn-1 a {
+  color: #000;
+}
+
+#btn-1:hover {
+  background: #1d50bb;
+  border: 1px solid #1d50bb;
+  color: #eee;
+}
+
+.presentation ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+  width: fit-content;
+}
+
+.presentation ul li {
+  border: 1px solid #13306e;
+  padding: 0.5rem 1rem 0.2rem 1rem;
+  border-radius: 100%;
+  display: flex;
+  transition: background 0.8s ease;
+}
+
+.presentation ul li:hover {
+  background: #bd386b;
+}
+
+.presentation figure img {
+  border-radius: 50rem;
+  width: 30rem;
+}
+
+section#about {
+  background-color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15rem;
+}
+
+article {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 8rem;
+}
+
+article figure {
+  overflow: hidden;
+  position: relative;
+  border-radius: 4rem;
+}
+
+article figure img {
+  transition: 0.5s ease transform;
+}
+
+article > figure:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #131518 0%, #080a0e 100%);
+  opacity: 0.7;
+  z-index: 20;
+  pointer-events: none;
+}
+article img:hover {
+  transform: scale(1.1);
+}
+
+#about h1 {
+  font-size: 5rem;
+  margin: 8rem;
+}
+
+#about p::first-letter {
+  font-size: 2.3rem;
+}
+#about p {
+  font-family: "Roboto";
+  word-wrap: break-word;
+  width: 40%;
+  line-height: 2.7rem;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+section#projects {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+#projects h1 {
+  font-size: 5rem;
+  margin: 8rem;
+}
+
+.project {
+  display: flex;
+  padding: 10rem 0;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  width: 95%;
+  height: 53rem;
+}
+.project-about {
+  padding-left: 5rem;
+}
+
+.project-description {
+  width: 80%;
+}
+.title-project {
+  font-size: 2.7rem;
+}
+.project ul {
+  display: flex;
+  gap: 2rem;
+  margin: 5rem 0;
+}
+
+.project button {
+  color: #1f1e1e;
+  background-color: #eee;
+  border-radius: 2rem;
+  border: none;
+  padding: 1rem 2rem;
+  font-family: "Poppins";
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 1rem 1rem 0 0;
+}
+
+.project .content {
+  display: flex;
+  align-items: center;
+}
+
+.project-about button {
+  background-color: transparent;
+  border: 1px solid #eee;
+  transition: 200ms;
+}
+.project-about button a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.project-about button:hover {
+  background: #000;
+  font-size: 1.3rem;
+  border: #000;
+}
+
+.content button {
+  width: 10rem;
+  height: 5rem;
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+}
+
+.content button img:hover {
+  border: 3px solid #000;
+  border-radius: 3rem;
+}
+
+.content button:first-child {
+  transform: rotate(180deg);
+}
+.project .deploy {
+  height: 30rem;
+  width: 50rem;
+  border: 3px solid #fff;
+  background: url("../images/photo.jfif") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section#skills {
+  background-color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+#skills h1 {
+  font-size: 5rem;
+  margin: 8rem;
+}
+
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+#skills ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #131518;
+  width: fit-content;
+  gap: 3rem;
+  width: 17rem;
+  height: 6.2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  transition: background 0.8s ease;
+}
+
+#skills ul li:hover {
+  background: #ffffff66;
+  transform: scale(1.1);
+}
+
+.skills-info {
+  word-wrap: break-word;
+  width: 80%;
+  margin: 5rem 0 10rem;
+  padding: 2rem;
+}
+
+.skills-info span {
+  color: #008000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+footer#contacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contacts h1 {
+  font-size: 5rem;
+  margin: 8rem;
+}
+#contacts h2 {
+  font-size: 2.5rem;
+}
+.contact {
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.send-email {
+  border-radius: 2rem;
+  padding: 1rem;
+  background: #131313;
+  text-align: center;
+  width: 30rem;
+  height: 20rem;
+  transition: all 0.8s ease;
+}
+
+.send-email:hover {
+  background-color: #000;
+}
+.send-email a {
+  text-decoration: none;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: inherit;
+  align-items: center;
+}
+
+.send-linkedin {
+  background: #131313;
+  border-radius: 2rem;
+  padding: 1rem;
+  text-align: center;
+  width: 30rem;
+  height: 20rem;
+  transition: all 0.8s ease;
+}
+
+.send-linkedin:hover {
+  background-color: #000;
+}
+
+.send-linkedin a {
+  text-decoration: none;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: inherit;
+  align-items: center;
+}
+
+.sociais-media {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.sociais-media li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy,
+footer ul {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}
+
+@media (max-width: 620px) {
+  header ul {
+    display: none;
+  }
+  section.presentation {
+    gap: 1px;
+  }
+  article {
+    flex-direction: column-reverse;
+  }
+  #about p {
+    width: 80%;
+  }
+  .presentation img {
+    display: none;
+  }
+  .project {
+    flex-direction: column;
+  }
+}
+
+.clear {
+  background: #eee;
+  color: #eee;
+}
+.clear.presentation {
+  color: #000;
+}
